@@ -123,11 +123,15 @@ public class ExpandableLinearLayout extends LinearLayout implements ExpandableLa
                                 : view.getMeasuredWidth() + params.leftMargin + params.rightMargin
                         ) + sumSize);
             }
-            layoutSize = childSizeList.get(childCount - 1) +
-                    (isVertical()
-                            ? getPaddingTop() + getPaddingBottom()
-                            : getPaddingLeft() + getPaddingRight()
-                    );
+            if(childCount == 0){
+                layoutSize = 0;
+            }else{
+                layoutSize = childSizeList.get(childCount - 1) +
+                        (isVertical()
+                                ? getPaddingTop() + getPaddingBottom()
+                                : getPaddingLeft() + getPaddingRight()
+                       );
+            }
             isCalculatedSize = true;
         }
 

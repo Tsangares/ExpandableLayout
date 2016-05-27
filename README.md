@@ -259,7 +259,7 @@ buildscript {
 }
 
 dependencies {
-	compile 'com.github.aakira:expandable-layout:1.5.1@aar'
+	compile 'com.github.Tsangares:ExpandableLayout:7da6d0f9c6'
 }
 ```
 
